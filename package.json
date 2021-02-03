@@ -1,5 +1,5 @@
 {
-  "name": "cayenne-ui-modal",
+  "name": "@cayenne-ui/modal",
   "version": "0.0.1",
   "scripts": {
     "test": "exit 0",
