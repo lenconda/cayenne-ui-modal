@@ -29,6 +29,7 @@ jobs:
       - run: ls -al
       - run: npm run build
       - run: ls -al
+      - run: cat tsconfig.json
       - save_cache:
           paths:
             - node_modules

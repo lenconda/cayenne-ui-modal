@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "module": "es6",
     "target": "es6",
     "strict": true,
     "jsx": "react",
@@ -12,6 +11,7 @@
     ],
     "plugins": [{ "name": "typescript-plugin-css-modules" }],
     "noImplicitAny": false,
+    "skipLibCheck": true,
     "sourceMap": false,
     "strictNullChecks": false,
     "allowJs": true,
@@ -40,6 +40,8 @@
     "scripts/**/*",
     "__tests__/**/*",
     "src/**/*.js",
-    "node_modules/**/*"
+    "typings/**/*.d.ts",
+    "./src/demo.tsx",
+    "node_modules"
   ]
 }
