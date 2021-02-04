@@ -129,8 +129,8 @@ const Modal: React.FC<ModalProps> = ({
                 handle=".cayenne-draggable-modal"
                 onDrag={(event) => {
                   if (
-                    draggableElement &&
-                    draggableElement.current && event.target === document.documentElement
+                    draggableElement && draggableElement.current &&
+                    event.target === document.documentElement
                   ) {
                     return false;
                   }

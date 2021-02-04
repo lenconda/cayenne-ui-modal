@@ -33,12 +33,13 @@
     ]
   },
   "compileOnSave": false,
+  "include": ["./src/**/*"],
   "exclude": [
     "config/**/*",
     "lib/**/*",
     "scripts/**/*",
     "__tests__/**/*",
     "src/**/*.js",
-    "src/demo.tsx"
+    "node_modules/**/*"
   ]
 }
