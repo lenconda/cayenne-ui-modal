@@ -17,12 +17,15 @@ module.exports = {
   rules: {
     indent: [
       'error',
-      2
+      2,
+      {
+        ignoredNodes: ['JSXElement *'],
+      },
     ],
     '@typescript-eslint/indent': 'off',
     'react/jsx-indent-props': [
       'error',
-      2
+      2,
     ],
     'semi': ['error', 'always'],
     '@typescript-eslint/explicit-member-accessibility': 'off',
@@ -32,7 +35,7 @@ module.exports = {
     'comma-dangle': ['error', 'always-multiline'],
     'react/jsx-indent': [
       'error',
-      2
+      2,
     ],
     'react-hooks/exhaustive-deps': 'off',
     '@typescript-eslint/no-empty-interface': 'off',
