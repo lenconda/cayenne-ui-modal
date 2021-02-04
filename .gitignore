@@ -18,4 +18,5 @@ package-lock.json
 # macOS file
 .DS_Store
 
-dist
+# dist dir
+lib

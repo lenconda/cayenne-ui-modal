@@ -3,7 +3,6 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserWebpackPlugin = require('terser-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const OptimizeCSSAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin');
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
@@ -420,12 +419,6 @@ module.exports = function() {
         filename: isEnvDevelopment ? 'static/css/[name].css' : 'static/css/[name].[contenthash:8].css',
         chunkFilename: isEnvDevelopment ? 'static/css/[id].css' : 'static/css/[id].[contenthash:8].css',
       }),
-      new CopyWebpackPlugin([
-        {
-          from: path.resolve(__dirname, '../assets/'),
-          to: path.resolve(APP_DIST_PATH, 'assets'),
-        },
-      ]),
       new CleanWebpackPlugin(),
       new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
       ...developmentPlugins,

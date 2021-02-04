@@ -1,25 +1,27 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
+    "module": "es6",
     "target": "es6",
     "strict": true,
     "jsx": "react",
+    "rootDir": "./src",
+    "outDir": "./lib",
     "typeRoots": [
       "typings/**/*.d.ts",
-      "./node_modules/@types/"
+      "./node_modules/@types/**/*",
     ],
     "plugins": [{ "name": "typescript-plugin-css-modules" }],
     "noImplicitAny": false,
-    "sourceMap": true,
+    "sourceMap": false,
     "strictNullChecks": false,
     "allowJs": true,
     "pretty": true,
     "esModuleInterop": true,
     "emitDecoratorMetadata": true,
+    "declaration": true,
     "experimentalDecorators": true,
-    "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
-    "resolveJsonModule": true,
+    "moduleResolution": "node",
     "noEmit": false,
     "lib": [
       "es5",
@@ -31,13 +33,12 @@
     ]
   },
   "compileOnSave": false,
-  "include": [
-    "src",
-    "./typings/"
-  ],
   "exclude": [
-    "./node_modules/**/*",
-    "dist/**/*",
-    "**/*.js",
+    "config/**/*",
+    "lib/**/*",
+    "scripts/**/*",
+    "__tests__/**/*",
+    "src/**/*.js",
+    "src/demo.tsx"
   ]
 }
